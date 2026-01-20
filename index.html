@@ -284,7 +284,7 @@
         footer {
             background: var(--dark);
             color: white;
-            padding: 3rem 0 2rem;
+            padding: 4rem 0 3rem;
             text-align: center;
         }
         
@@ -297,19 +297,22 @@
         }
         
         .footer-links a {
-            color: white;
+            color: white; /* This ensures they aren't blue/purple */
             text-decoration: none;
             opacity: 0.8;
             transition: opacity 0.2s;
+            font-weight: 500;
         }
         
         .footer-links a:hover {
             opacity: 1;
+            text-decoration: underline;
         }
         
         .copyright {
             opacity: 0.6;
             font-size: 0.9rem;
+            margin-top: 1rem;
         }
         
         /* Responsive */
@@ -364,7 +367,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -374,7 +376,6 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <div class="hero-emoji">🚀</div>
@@ -383,14 +384,12 @@
         </div>
     </section>
 
-    <!-- Apps Section -->
     <section class="apps-section">
         <div class="container">
             <h2 class="section-title">Our Apps</h2>
             <p class="section-subtitle">Simple, powerful tools to help you stay organized and achieve your goals</p>
             
             <div class="apps-grid">
-                <!-- SampleFlow App Card -->
                 <div class="app-card">
                     <span class="badge">✨ NEW - FREE TO TRY</span>
                     <div class="app-icon">📦</div>
@@ -409,7 +408,6 @@
                     <a href="https://lazybstudios.com/sampleflow" class="app-btn">🎯 Try SampleFlow Free</a>
                 </div>
                 
-                <!-- Golf Tracker App Card -->
                 <div class="app-card">
                     <span class="badge">⛳ FREE & LIVE</span>
                     <div class="app-icon">⛳</div>
@@ -428,7 +426,6 @@
                     <a href="https://lazybstudios.com/golf" class="app-btn">⛳ Start Tracking Now</a>
                 </div>
                 
-                <!-- Placeholder for Future App -->
                 <div class="app-card placeholder-card">
                     <span class="coming-soon">🔜 COMING SOON</span>
                     <div class="app-icon">✨</div>
@@ -448,7 +445,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about-section">
         <div class="container">
             <div class="about-content">
@@ -460,7 +456,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-box">
@@ -471,17 +466,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-           <div class="footer-links">
-    <a href="privacy.html">🔒 Privacy Policy</a>
-    <a href="terms.html">📄 Terms of Service</a>
-    <a href="refunds.html">💰 Refund Policy</a> <a href="mailto:support@lazybstudios.com">📧 Contact</a>
-</div>
+            <div class="footer-links">
+                <a href="privacy.html">🔒 Privacy Policy</a>
+                <a href="terms.html">📄 Terms of Service</a>
+                <a href="refunds.html">💰 Refund Policy</a>
+                <a href="mailto:support@lazybstudios.com">📧 Contact</a>
+            </div>
             <p class="copyright">© 2026 Lazy B Studios. All rights reserved. Lafayette, Louisiana.</p>
         </div>
     </footer>
 </body>
 </html>
-
