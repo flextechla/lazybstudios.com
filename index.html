@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazy B Studios - Productivity Tools for Content Creators</title>
+    <title>Lazy B Studios - Productivity Tools</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -13,70 +13,48 @@
             --light: #f8f9fa;
             --gray: #6c757d;
             --pro-purple: #9C27B0;
+            --golf-green: #00C853;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         
-        /* Header */
         header { background: white; padding: 1.5rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
         .header-content { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #FE2C55 0%, #FF6B8A 100%); color: white; padding: 5rem 0; text-align: center; }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; }
-        .hero p { font-size: 1.4rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem; }
-
-        /* Pricing Grid */
-        .apps-section { padding: 5rem 0; background: white; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .hero { background: linear-gradient(135deg, #FE2C55 0%, #FF6B8A 100%); color: white; padding: 4rem 0; text-align: center; }
+        
+        .section-title { text-align: center; font-size: 2.5rem; margin: 3rem 0; }
+        
+        /* Grid Layout */
+        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
         
         .app-card {
             background: white;
             border-radius: 20px;
-            padding: 2.5rem;
+            padding: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             border: 3px solid transparent;
-            transition: transform 0.3s;
         }
-        .app-card:hover { transform: translateY(-5px); }
-        .featured { border-color: var(--primary); transform: scale(1.05); }
+        .featured { border-color: var(--primary); }
         .pro-border { border-color: var(--pro-purple); }
+        .golf-border { border-color: var(--golf-green); }
 
-        .app-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .badge { display: inline-block; padding: 0.4rem 1rem; border-radius: 20px; color: white; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
-        
-        .feature-list { list-style: none; margin: 2rem 0; flex-grow: 1; }
-        .feature-list li { padding: 0.5rem 0; font-size: 0.95rem; }
+        .badge { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; color: white; font-size: 0.75rem; font-weight: 700; margin-bottom: 1rem; }
+        .feature-list { list-style: none; margin: 1.5rem 0; flex-grow: 1; font-size: 0.9rem; }
         .feature-list li:before { content: "✓ "; color: var(--primary); font-weight: bold; }
 
         .app-btn {
             display: block;
             text-align: center;
-            padding: 1rem;
+            padding: 0.8rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
             color: white;
-            transition: opacity 0.2s;
         }
-        .btn-gray { background: #6c757d; }
-        .btn-primary { background: var(--primary); }
-        .btn-purple { background: var(--pro-purple); }
-
-        /* Footer */
-        footer { background: var(--dark); color: white; padding: 4rem 0; text-align: center; }
-        .footer-links { margin-bottom: 2rem; }
-        .footer-links a { color: white; margin: 0 1rem; text-decoration: none; opacity: 0.7; }
-        .mor-text { font-size: 0.8rem; opacity: 0.6; margin: 1rem 0; }
     </style>
 </head>
 <body>
@@ -85,80 +63,80 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">🅱️ Lazy B Studios</div>
-                <a href="mailto:support@lazybstudios.com" style="text-decoration:none; font-weight:600; color:var(--primary)">Contact Us</a>
+                <a href="mailto:support@lazybstudios.com" style="text-decoration:none; color:var(--primary)">Contact</a>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <div style="font-size: 4rem;">📦</div>
-            <h1>SampleFlow</h1>
-            <p>The ultimate PR sample and brand deal tracker for creators. Stay organized, hit deadlines, and grow your brand.</p>
+            <h1>Simple Tools for Real People</h1>
+            <p>From brand deals to your golf handicap, we help you track what matters.</p>
         </div>
     </section>
 
-    <section class="apps-section">
-        <div class="container">
-            <h2 class="section-title">Choose Your Plan</h2>
-            
-            <div class="apps-grid">
-                <div class="app-card">
-                    <span class="badge" style="background: #6c757d;">GET STARTED</span>
-                    <div class="app-icon">🌱</div>
-                    <h3>Free</h3>
-                    <p>Perfect for trying out SampleFlow.</p>
-                    <ul class="feature-list">
-                        <li>Track up to 5 samples</li>
-                        <li>1 Photo per sample</li>
-                        <li>Deadline tracking</li>
-                        <li>Mobile-friendly dashboard</li>
-                    </ul>
-                    <a href="https://lazybstudios.com/sampleflow" class="app-btn btn-gray">Create Free Account</a>
-                </div>
+    <div class="container">
+        <h2 class="section-title">SampleFlow Tiers</h2>
+        <div class="apps-grid">
+            <div class="app-card">
+                <span class="badge" style="background: #6c757d;">FREE TIER</span>
+                <h3>SampleFlow Free</h3>
+                <ul class="feature-list">
+                    <li>Up to 5 samples</li>
+                    <li>1 Photo per sample</li>
+                    <li>Deadline tracking</li>
+                </ul>
+                <a href="https://lazybstudios.com/sampleflow.html" class="app-btn" style="background: #6c757d;">Start Free</a>
+            </div>
 
-                <div class="app-card featured">
-                    <span class="badge" style="background: var(--primary);">MOST POPULAR</span>
-                    <div class="app-icon">🚀</div>
-                    <h3>Basic</h3>
-                    <p>For serious creators with active deals.</p>
-                    <ul class="feature-list">
-                        <li><strong>Unlimited Samples</strong></li>
-                        <li>Calendar View access</li>
-                        <li>Multi-photo storage</li>
-                        <li>Ready-to-film reminders</li>
-                        <li>Cloud sync across devices</li>
-                    </ul>
-                    <a href="https://lazybstudios.lemonsqueezy.com/checkout/buy/a921ce0f-6637-4263-a5d7-2cf1f648b9bf" class="app-btn btn-primary">Get Basic Access</a>
-                </div>
+            <div class="app-card featured">
+                <span class="badge" style="background: var(--primary);">MOST POPULAR</span>
+                <h3>SampleFlow Basic</h3>
+                <ul class="feature-list">
+                    <li><strong>Unlimited Samples</strong></li>
+                    <li>Calendar View</li>
+                    <li>Multi-photo storage</li>
+                </ul>
+                <a href="https://lazybstudios.lemonsqueezy.com/checkout/buy/a921ce0f-6637-4263-a5d7-2cf1f648b9bf" class="app-btn" style="background: var(--primary);">Get Basic</a>
+            </div>
 
-                <div class="app-card pro-border">
-                    <span class="badge" style="background: var(--pro-purple);">PRO TOOLS</span>
-                    <div class="app-icon">💎</div>
-                    <h3>Pro</h3>
-                    <p>Advanced tools for pro creators.</p>
-                    <ul class="feature-list">
-                        <li>Everything in Basic</li>
-                        <li><strong>AI Video Script Generator</strong></li>
-                        <li>Advanced Analytics</li>
-                        <li>Data Export (CSV/Excel)</li>
-                        <li>Direct TikTok Integration</li>
-                    </ul>
-                    <a href="https://lazybstudios.lemonsqueezy.com/checkout/buy/d324fe3e-0a61-4d6c-bffd-25e7a92d1ef0" class="app-btn btn-purple">Upgrade to Pro</a>
-                </div>
+            <div class="app-card pro-border">
+                <span class="badge" style="background: var(--pro-purple);">PRO TOOLS</span>
+                <h3>SampleFlow Pro</h3>
+                <ul class="feature-list">
+                    <li>AI Script Generator</li>
+                    <li>Full Analytics</li>
+                    <li>TikTok Integration</li>
+                </ul>
+                <a href="https://lazybstudios.lemonsqueezy.com/checkout/buy/d324fe3e-0a61-4d6c-bffd-25e7a92d1ef0" class="app-btn" style="background: var(--pro-purple);">Go Pro</a>
             </div>
         </div>
-    </section>
+
+        <h2 class="section-title">Our Other Apps</h2>
+        <div class="apps-grid" style="grid-template-columns: 1fr;">
+            <div class="app-card golf-border" style="max-width: 400px; margin: 0 auto;">
+                <span class="badge" style="background: var(--golf-green);">100% FREE</span>
+                <div style="font-size: 2rem;">⛳</div>
+                <h3>Golf Tracker</h3>
+                <p>Track your official WHS handicap and compete with friends.</p>
+                <ul class="feature-list">
+                    <li>Official WHS calculations</li>
+                    <li>Course database</li>
+                    <li>Leaderboards</li>
+                </ul>
+                <a href="golf.html" class="app-btn" style="background: var(--golf-green);">Play Now</a>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="refunds.html">Refund Policy</a>
+        <div class="container" style="text-align: center; padding: 4rem 0;">
+            <div style="margin-bottom: 2rem;">
+                <a href="privacy.html" style="margin: 0 10px; color: #666;">Privacy</a>
+                <a href="terms.html" style="margin: 0 10px; color: #666;">Terms</a>
+                <a href="refunds.html" style="margin: 0 10px; color: #666;">Refunds</a>
             </div>
-            <p class="mor-text">Payments processed by Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders.</p>
-            <p style="opacity:0.5; font-size:0.8rem;">© 2026 Lazy B Studios. Lafayette, Louisiana.</p>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Payments processed by Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders.</p>
         </div>
     </footer>
 
