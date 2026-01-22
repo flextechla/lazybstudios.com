@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Lazy B Studios</title>
+    <title>Terms of Service | Lazy B Studios</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #1a1a2e; max-width: 800px; margin: 0 auto; padding: 2rem; background: #f8f9fa; }
-        .container { background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h1 { color: #FE2C55; }
-        h2 { margin-top: 2rem; border-bottom: 2px solid #f8f9fa; padding-bottom: 0.5rem; }
-        .back-link { display: inline-block; margin-bottom: 2rem; color: #FE2C55; text-decoration: none; font-weight: bold; }
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #f8f9fa; }
+        .card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        h1 { color: #FE2C55; margin-top: 0; }
+        h2 { border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-top: 30px; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #666; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="index.html" class="back-link">← Back to SampleFlow</a>
+    <div class="card">
         <h1>Terms of Service</h1>
         <p><strong>Effective Date:</strong> January 20, 2026</p>
-
-        <h2>1. Agreement to Terms</h2>
-        <p>By using Lazy B Studios apps (SampleFlow, Golf Tracker), you agree to these terms.</p>
-
-        <h2>2. Use of Service</h2>
-        <p>You agree not to misuse our services or help anyone else do so. Our tools are provided "as-is" without warranty.</p>
-
-        <h2>3. Billing</h2>
-        <p>Subscriptions and purchases are handled by <strong>Lemon Squeezy</strong>, our Merchant of Record. Billing disputes should be directed to our support team.</p>
-
+        
+        <h2>1. Agreement</h2>
+        <p>By using Lazy B Studios apps (SampleFlow, Golf Tracker), you agree to these terms. If you do not agree, please discontinue use of our services.</p>
+        
+        <h2>2. Service Usage</h2>
+        <p>Our tools are provided "as-is" without warranty of any kind. You agree not to misuse our services or attempt to reverse engineer our software.</p>
+        
+        <h2>3. Subscriptions</h2>
+        <p>Subscriptions are managed by our Merchant of Record. By purchasing, you agree to their billing terms. You may cancel at any time.</p>
+        
         <h2>4. Limitation of Liability</h2>
-        <p>Lazy B Studios is not liable for any data loss or damages resulting from the use of our software.</p>
-
+        <p>Lazy B Studios is not liable for data loss or damages resulting from the use of our software.</p>
+        
         <h2>5. Contact</h2>
-        <p>Questions? Reach out at <strong>support@lazybstudios.com</strong>.</p>
+        <p>support@lazybstudios.com</p>
     </div>
 </body>
 </html>
