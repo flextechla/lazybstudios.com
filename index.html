@@ -3,142 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazy B Studios - Productivity Tools</title>
+    <title>Lazy B Studios - Productivity Tools for Content Creators</title>
+    <meta name="description" content="Lazy B Studios creates powerful productivity tools designed specifically for content creators and influencers.">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         :root {
             --primary: #FE2C55;
             --primary-light: #FF6B8A;
             --dark: #1a1a2e;
             --light: #f8f9fa;
             --gray: #6c757d;
-            --pro-purple: #9C27B0;
-            --golf-green: #00C853;
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         
-        header { background: white; padding: 1.5rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
         
-        .hero { background: linear-gradient(135deg, #FE2C55 0%, #FF6B8A 100%); color: white; padding: 4rem 0; text-align: center; }
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
         
-        .section-title { text-align: center; font-size: 2.5rem; margin: 3rem 0; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
         
-        /* Grid Layout */
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .contact-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FE2C55 0%, #FF6B8A 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-emoji {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Apps Section */
+        .apps-section {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 4rem;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
         
         .app-card {
             background: white;
             border-radius: 20px;
-            padding: 2rem;
+            padding: 2.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
             border: 3px solid transparent;
         }
-        .featured { border-color: var(--primary); }
-        .pro-border { border-color: var(--pro-purple); }
-        .golf-border { border-color: var(--golf-green); }
-
-        .badge { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; color: white; font-size: 0.75rem; font-weight: 700; margin-bottom: 1rem; }
-        .feature-list { list-style: none; margin: 1.5rem 0; flex-grow: 1; font-size: 0.9rem; }
-        .feature-list li:before { content: "✓ "; color: var(--primary); font-weight: bold; }
-
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(254, 44, 85, 0.15);
+            border-color: var(--primary-light);
+        }
+        
+        .app-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .app-card h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .app-card p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        
+        .feature-list li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
         .app-btn {
-            display: block;
-            text-align: center;
-            padding: 0.8rem;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1rem 2rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        
+        .app-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00C853, #00E676);
             color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .contact-box h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .contact-email {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        .mor-text {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .apps-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">🅱️ Lazy B Studios</div>
-                <a href="mailto:support@lazybstudios.com" style="text-decoration:none; color:var(--primary)">Contact</a>
+                <a href="mailto:support@lazybstudios.com" class="contact-btn">📧 Contact Us</a>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>Simple Tools for Real People</h1>
-            <p>From brand deals to your golf handicap, we help you track what matters.</p>
+            <div class="hero-emoji">🚀</div>
+            <h1>Productivity Tools for Everyone</h1>
+            <p>We build powerful, easy-to-use apps for content creators, athletes, and anyone who wants to stay organized.</p>
         </div>
     </section>
 
-    <div class="container">
-        <h2 class="section-title">SampleFlow Tiers</h2>
-        <div class="apps-grid">
-            <div class="app-card">
-                <span class="badge" style="background: #6c757d;">FREE TIER</span>
-                <h3>SampleFlow Free</h3>
-                <ul class="feature-list">
-                    <li>Up to 5 samples</li>
-                    <li>1 Photo per sample</li>
-                    <li>Deadline tracking</li>
-                </ul>
-                <a href="sampleflow.html" class="app-btn" style="background: #6c757d;">Start Free</a>
-            </div>
+    <section class="apps-section">
+        <div class="container">
+            <h2 class="section-title">Our Apps</h2>
+            <p class="section-subtitle">Simple, powerful tools to help you stay organized and achieve your goals</p>
+            
+            <div class="apps-grid">
+                <div class="app-card">
+                    <span class="badge">✨ NEW - GET ACCESS</span>
+                    <div class="app-icon">📦</div>
+                    <h3>SampleFlow Basic</h3>
+                    <p>Never miss a brand collaboration deadline again. Track all your PR samples, gifts, and brand deals in one beautiful app.</p>
+                    
+                    <ul class="feature-list">
+                        <li>Track unlimited brand samples</li>
+                        <li>Calendar view of all deadlines</li>
+                        <li>Photo storage for each sample</li>
+                        <li>Ready-to-Film reminders</li>
+                        <li>Analytics & export features</li>
+                        <li>Sync across all devices</li>
+                    </ul>
 
-            <div class="app-card featured">
-                <span class="badge" style="background: var(--primary);">MOST POPULAR</span>
-                <h3>SampleFlow Basic</h3>
-                <ul class="feature-list">
-                    <li><strong>Unlimited Samples</strong></li>
-                    <li>Calendar View</li>
-                    <li>Multi-photo storage</li>
-                </ul>
-                <a href="PASTE_YOUR_BASIC_LINK" class="app-btn" style="background: var(--primary);">Get Basic</a>
-            </div>
-
-            <div class="app-card pro-border">
-                <span class="badge" style="background: var(--pro-purple);">PRO TOOLS</span>
-                <h3>SampleFlow Pro</h3>
-                <ul class="feature-list">
-                    <li>AI Script Generator</li>
-                    <li>Full Analytics</li>
-                    <li>TikTok Integration</li>
-                </ul>
-                <a href="PASTE_YOUR_PRO_LINK" class="app-btn" style="background: var(--pro-purple);">Go Pro</a>
+                    <div class="app-card" style="border-color: #9C27B0;">
+    <span class="badge" style="background: linear-gradient(135deg, #9C27B0, #BA68C8);">🔥 MOST POPULAR</span>
+    <div class="app-icon">🚀</div>
+    <h3>SampleFlow Pro $14.95</h3>
+    <p>The ultimate toolkit for professional creators who want to scale their brand partnerships.</p>
+    
+    <ul class="feature-list">
+        <li><strong>Everything in Basic, plus:</strong></li>
+        <li>AI Video Script Generator</li>
+        <li>Advanced Analytics Dashboard</li>
+        <li>Export data to CSV/Excel</li>
+        <li>Direct TikTok Integration</li>
+    </ul>
+    
+    <a href="https://lazybstudios.lemonsqueezy.com/checkout/buy/d324fe3e-0a61-4d6c-bffd-25e7a92d1ef0" class="app-btn" style="background: linear-gradient(135deg, #9C27B0, #BA68C8);">💎 Upgrade to Pro</a>
+</div>
+                    
+                    <a href="https://lazybstudios.lemonsqueezy.com/checkout/buy/a921ce0f-6637-4263-a5d7-2cf1f648b9bf" class="app-btn">🎯 Get SampleFlow Basic</a>
+                </div>
+                
+                <div class="app-card">
+                    <span class="badge">⛳ FREE & LIVE</span>
+                    <div class="app-icon">⛳</div>
+                    <h3>Golf Tracker</h3>
+                    <p>Track your golf handicap using the official World Handicap System. Compete with friends and watch your game improve.</p>
+                    
+                    <ul class="feature-list">
+                        <li>Official WHS handicap calculation</li>
+                        <li>Track scores & courses</li>
+                        <li>Group leaderboards</li>
+                        <li>Score history & analytics</li>
+                        <li>Course database</li>
+                        <li>100% Free forever</li>
+                    </ul>
+                    
+                    <a href="https://lazybstudios.com/golf" class="app-btn">⛳ Start Tracking Now</a>
+                </div>
             </div>
         </div>
-
-        <h2 class="section-title">Our Other Apps</h2>
-        <div class="apps-grid" style="grid-template-columns: 1fr;">
-            <div class="app-card golf-border" style="max-width: 400px; margin: 0 auto;">
-                <span class="badge" style="background: var(--golf-green);">100% FREE</span>
-                <div style="font-size: 2rem;">⛳</div>
-                <h3>Golf Tracker</h3>
-                <p>Track your official WHS handicap and compete with friends.</p>
-                <ul class="feature-list">
-                    <li>Official WHS calculations</li>
-                    <li>Course database</li>
-                    <li>Leaderboards</li>
-                </ul>
-                <a href="golf.html" class="app-btn" style="background: var(--golf-green);">Play Now</a>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <footer>
-        <div class="container" style="text-align: center; padding: 4rem 0;">
-            <div style="margin-bottom: 2rem;">
-                <a href="privacy.html" style="margin: 0 10px; color: #666;">Privacy</a>
-                <a href="terms.html" style="margin: 0 10px; color: #666;">Terms</a>
-                <a href="refunds.html" style="margin: 0 10px; color: #666;">Refunds</a>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">🔒 Privacy Policy</a>
+                <a href="terms.html">📄 Terms of Service</a>
+                <a href="refunds.html">💰 Refund Policy</a>
+                <a href="mailto:support@lazybstudios.com">📧 Contact</a>
             </div>
-            <p style="font-size: 0.8rem; opacity: 0.6;">Payments processed by Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders.</p>
+            
+            <p class="mor-text">
+                Payments processed by Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders.
+            </p>
+
+            <p class="copyright">© 2026 Lazy B Studios. All rights reserved. Lafayette, Louisiana.</p>
         </div>
     </footer>
-
 </body>
 </html>
+
+
+
